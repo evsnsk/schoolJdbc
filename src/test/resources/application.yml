@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:15-alpine:///school_db?TC_DAEMON=true
+    username: postgres
+    password: 1234
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 5
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+
+ 
+
+      
+  
+app:
+    generator:
+        group:
+            count: 2
+        student:
+            count: 10
+
+logging:
+    level:
+        root: INFO 
+#        org:
+#            hibernate:
+#                type: trace

@@ -1,0 +1,26 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+     url: jdbc:postgresql://localhost:5432/school
+     username: postgres
+     password: 1234
+     driverClassName: org.postgresql.Driver
+
+
+app:
+    generator:
+        group:
+            count: 10
+        student:
+            count: 200
+
+logging:
+    level:
+        root: INFO 
+#        org:
+#           hibernate:
+#               type: debug  
